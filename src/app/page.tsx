@@ -93,7 +93,7 @@ export default function Home() {
             <section id="experience" className="scroll-m-20">
               <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Professional Experience</h2>
               <div className="space-y-6 max-w-4xl mx-auto">
-                <Card>
+                <Card className="bg-secondary">
                   <CardHeader>
                     <CardTitle>ML Intern</CardTitle>
                     <CardDescription>Beumer Group Middle East, Dubai (Onsite) | May 2025 - June 2025</CardDescription>
@@ -157,7 +157,7 @@ export default function Home() {
                  <div>
                     <h3 className="text-2xl font-semibold mb-4 text-center text-primary">Industrial Projects (Beumer Group)</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <Card>
+                      <Card className="bg-secondary">
                         <CardHeader>
                           <CardTitle>Fehlix</CardTitle>
                           <CardDescription>Predictive maintenance for baggage handling systems.</CardDescription>
@@ -166,7 +166,7 @@ export default function Home() {
                           <p className="text-muted-foreground">Forecasted sensor faults in baggage systems using ML models; deployed a fault prediction engine to improve maintenance response time.</p>
                         </CardContent>
                       </Card>
-                      <Card>
+                      <Card className="bg-secondary">
                         <CardHeader>
                           <CardTitle>Nexflight</CardTitle>
                           <CardDescription>Baggage transfer optimization model.</CardDescription>
@@ -183,7 +183,7 @@ export default function Home() {
              <section id="skills" className="scroll-m-20">
               <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Skills</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                  <Card className="bg-secondary">
+                  <Card className="bg-accent">
                       <CardHeader>
                         <CardTitle className="text-center text-primary">Programming</CardTitle>
                       </CardHeader>
@@ -194,7 +194,7 @@ export default function Home() {
                           <Badge>SQL</Badge>
                       </CardContent>
                   </Card>
-                  <Card className="bg-secondary">
+                  <Card className="bg-accent">
                        <CardHeader>
                         <CardTitle className="text-center text-primary">Tools</CardTitle>
                       </CardHeader>
@@ -202,10 +202,11 @@ export default function Home() {
                           <Badge>Git</Badge>
                           <Badge>ROS2</Badge>
                           <Badge>SLAM</Badge>
-                          <Badge>Embedded Systems &amp; Sensor Integration</Badge>
+                          <Badge>Embedded Systems</Badge>
+                          <Badge>Unix/Linux</Badge>
                       </CardContent>
                   </Card>
-                   <Card className="bg-secondary">
+                   <Card className="bg-accent">
                        <CardHeader>
                         <CardTitle className="text-center text-primary">AI/ML</CardTitle>
                       </CardHeader>
@@ -224,7 +225,7 @@ export default function Home() {
             <section id="education" className="scroll-m-20">
                 <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Education</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                    <Card>
+                    <Card className="bg-secondary">
                         <CardHeader>
                             <CardTitle>Shiv Nadar University, Chennai</CardTitle>
                             <CardDescription>Aug 2023 - Aug 2027</CardDescription>
@@ -234,7 +235,7 @@ export default function Home() {
                             <p className="text-sm">CGPA: 8.86</p>
                         </CardContent>
                     </Card>
-                    <Card>
+                    <Card className="bg-secondary">
                         <CardHeader>
                             <CardTitle>DAV Public School, Chennai</CardTitle>
                             <CardDescription>Graduated 2023</CardDescription>
@@ -296,4 +297,5 @@ export default function Home() {
       </main>
     </div>
   );
+    
     
