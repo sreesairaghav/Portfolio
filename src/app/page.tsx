@@ -53,7 +53,7 @@ export default function Home() {
       </header>
 
       <main className="container mx-auto">
-        <section id="home" className="flex flex-col items-center justify-center text-center min-h-[calc(100vh-3.5rem)] py-20 gap-8">
+        <section id="home" className="flex flex-col items-center justify-center text-center min-h-[calc(100vh-3.5rem)] py-20 gap-8 bg-secondary">
             <Avatar className="w-48 h-48">
               <AvatarImage src="https://firebasestudio-hosting.web.app/images/sree-sai-raghav-c.jpeg" alt="Sree Sai Raghav C" />
               <AvatarFallback>SR</AvatarFallback>
@@ -188,10 +188,10 @@ export default function Home() {
                         <CardTitle className="text-center text-primary">Programming</CardTitle>
                       </CardHeader>
                       <CardContent className="flex flex-wrap gap-2 justify-center">
-                          <Badge>Python</Badge>
-                          <Badge>C++</Badge>
-                          <Badge>Java</Badge>
-                          <Badge>SQL</Badge>
+                          <Badge variant="secondary">Python</Badge>
+                          <Badge variant="secondary">C++</Badge>
+                          <Badge variant="secondary">Java</Badge>
+                          <Badge variant="secondary">SQL</Badge>
                       </CardContent>
                   </Card>
                   <Card className="bg-accent">
@@ -199,11 +199,11 @@ export default function Home() {
                         <CardTitle className="text-center text-primary">Tools</CardTitle>
                       </CardHeader>
                       <CardContent className="flex flex-wrap gap-2 justify-center">
-                          <Badge>Git</Badge>
-                          <Badge>ROS2</Badge>
-                          <Badge>SLAM</Badge>
-                          <Badge>Embedded Systems</Badge>
-                          <Badge>Unix/Linux</Badge>
+                          <Badge variant="secondary">Git</Badge>
+                          <Badge variant="secondary">ROS2</Badge>
+                          <Badge variant="secondary">SLAM</Badge>
+                          <Badge variant="secondary">Embedded Systems</Badge>
+                          <Badge variant="secondary">Unix/Linux</Badge>
                       </CardContent>
                   </Card>
                    <Card className="bg-accent">
@@ -211,12 +211,12 @@ export default function Home() {
                         <CardTitle className="text-center text-primary">AI/ML</CardTitle>
                       </CardHeader>
                       <CardContent className="flex flex-wrap gap-2 justify-center">
-                          <Badge>TensorFlow</Badge>
-                          <Badge>PyTorch</Badge>
-                          <Badge>Scikit-learn</Badge>
-                          <Badge>OpenCV</Badge>
-                          <Badge>NumPy</Badge>
-                          <Badge>Pandas</Badge>
+                          <Badge variant="secondary">TensorFlow</Badge>
+                          <Badge variant="secondary">PyTorch</Badge>
+                          <Badge variant="secondary">Scikit-learn</Badge>
+                          <Badge variant="secondary">OpenCV</Badge>
+                          <Badge variant="secondary">NumPy</Badge>
+                          <Badge variant="secondary">Pandas</Badge>
                       </CardContent>
                   </Card>
               </div>
@@ -252,23 +252,23 @@ export default function Home() {
                 <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Achievements</h2>
                 <div className="max-w-3xl mx-auto">
                   <ul className="space-y-4">
-                      <li className="flex items-start gap-4">
+                      <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
                           <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                           <p className="text-muted-foreground">Recognized by the CEO of Beumer Group Middle East for impactful ML contributions during my internship.</p>
                       </li>
-                      <li className="flex items-start gap-4">
+                      <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
                           <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                           <p className="text-muted-foreground">Awarded <span className="font-semibold text-foreground">Best Project</span> for "TragerX" at CEG Anna University, Chennai.</p>
                       </li>
-                      <li className="flex items-start gap-4">
+                      <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
                           <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                           <p className="text-muted-foreground">Achieved <span className="font-semibold text-foreground">Runner-Up</span> position in the IoT-Verse Hackathon at IIITDM, Kanchipuram.</p>
                       </li>
-                       <li className="flex items-start gap-4">
+                       <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
                           <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                           <p className="text-muted-foreground">Selected as a <span className="font-semibold text-foreground">Student Ambassador</span> at Shiv Nadar University, representing the institution to prospective students.</p>
                       </li>
-                      <li className="flex items-start gap-4">
+                      <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
                           <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                           <p className="text-muted-foreground">Served as the <span className="font-semibold text-foreground">School Pupil Leader</span> at DAV Public School, leading the student body.</p>
                       </li>
