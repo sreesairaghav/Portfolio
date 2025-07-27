@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Github, Linkedin, Mail, MapPin, Phone, Menu, Trophy } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Menu, Trophy, ExternalLink } from "lucide-react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 
 export default function Home() {
@@ -24,7 +24,7 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto flex h-14 items-center justify-between">
-          <a href="#home" className="text-lg font-bold">Sree Sai Raghav C</a>
+          <a href="#" className="text-lg font-bold scroll-m-20">Sree Sai Raghav C</a>
           <nav className="hidden md:flex gap-4">
             {navLinks.map((link) => (
               <a key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
@@ -70,7 +70,7 @@ export default function Home() {
         </section>
 
         <div className="px-4 md:px-8 lg:px-12 py-16 space-y-16">
-            <section id="about">
+            <section id="about" className="scroll-m-20">
               <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">About Me</h2>
               <div className="max-w-3xl mx-auto space-y-4 text-muted-foreground text-center md:text-left">
                 <p>A passionate tech enthusiast exploring the intersection of Artificial Intelligence, Machine Learning, and the Internet of Things. I enjoy building smart, real-world applications that make life easier, more efficient, and better connected.</p>
@@ -80,7 +80,7 @@ export default function Home() {
               </div>
             </section>
 
-            <section id="experience">
+            <section id="experience" className="scroll-m-20">
               <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Professional Experience</h2>
               <div className="space-y-6 max-w-4xl mx-auto">
                 <Card>
@@ -109,7 +109,7 @@ export default function Home() {
               </div>
             </section>
             
-            <section id="projects">
+            <section id="projects" className="scroll-m-20">
               <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Projects</h2>
               <div className="max-w-4xl mx-auto space-y-8">
                 <div>
@@ -123,8 +123,8 @@ export default function Home() {
                         <CardContent>
                           <p className="text-muted-foreground mb-4">Advanced dashboard for real-time monitoring, predictive analytics, and intelligent insights into electric vehicle charging stations.</p>
                           <div className="flex gap-2">
-                              <Button variant="outline" size="sm" asChild><a href="https://wattsight-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Live Demo</a></Button>
-                              <Button variant="outline" size="sm" asChild><a href="https://github.com/sreesairaghav/WattSight" target="_blank" rel="noopener noreferrer">GitHub</a></Button>
+                              <Button variant="outline" size="sm" asChild><a href="https://wattsight-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Live Demo <ExternalLink className="ml-2 h-4 w-4" /></a></Button>
+                              <Button variant="outline" size="sm" asChild><a href="https://github.com/sreesairaghav/WattSight" target="_blank" rel="noopener noreferrer">GitHub <Github className="ml-2 h-4 w-4" /></a></Button>
                           </div>
                         </CardContent>
                       </Card>
@@ -135,6 +135,10 @@ export default function Home() {
                         </CardHeader>
                         <CardContent>
                           <p className="text-muted-foreground mb-4">Enhances passenger convenience by enabling autonomous trolleys to navigate seamlessly to key airport locations like check-in counters and boarding gates.</p>
+                          <div className="flex gap-2 mb-4">
+                            <Button variant="outline" size="sm" asChild><a href="https://drive.google.com/file/d/1-6IStxXljf9WD84k9xW_FxE0FGe_dwP6/view?usp=sharing" target="_blank" rel="noopener noreferrer">Live Demo <ExternalLink className="ml-2 h-4 w-4" /></a></Button>
+                            <Button variant="outline" size="sm" asChild><a href="https://github.com/aerosibin/TragerX" target="_blank" rel="noopener noreferrer">GitHub <Github className="ml-2 h-4 w-4" /></a></Button>
+                          </div>
                           <p className="italic text-sm text-primary">Best Project Presentation at CEG Anna University, Chennai &amp; Runner-up at IoT Verse, IIITDM Kanchipuram.</p>
                         </CardContent>
                       </Card>
@@ -166,42 +170,42 @@ export default function Home() {
               </div>
             </section>
 
-             <section id="skills">
+             <section id="skills" className="scroll-m-20">
               <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Skills</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                   <div>
-                      <h3 className="font-semibold mb-4 text-center md:text-left text-xl">Programming</h3>
+                      <h3 className="font-semibold mb-4 text-center md:text-left text-xl text-primary">Programming</h3>
                       <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                          <Badge variant="secondary">Python</Badge>
-                          <Badge variant="secondary">C++</Badge>
-                          <Badge variant="secondary">Java</Badge>
-                          <Badge variant="secondary">SQL</Badge>
+                          <Badge>Python</Badge>
+                          <Badge>C++</Badge>
+                          <Badge>Java</Badge>
+                          <Badge>SQL</Badge>
                       </div>
                   </div>
                    <div>
-                      <h3 className="font-semibold mb-4 text-center md:text-left text-xl">Tools</h3>
+                      <h3 className="font-semibold mb-4 text-center md:text-left text-xl text-primary">Tools</h3>
                       <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                          <Badge variant="secondary">Git</Badge>
-                          <Badge variant="secondary">ROS2</Badge>
-                          <Badge variant="secondary">SLAM</Badge>
-                          <Badge variant="secondary">Embedded Systems &amp; Sensor Integration</Badge>
+                          <Badge>Git</Badge>
+                          <Badge>ROS2</Badge>
+                          <Badge>SLAM</Badge>
+                          <Badge>Embedded Systems &amp; Sensor Integration</Badge>
                       </div>
                   </div>
                    <div>
-                      <h3 className="font-semibold mb-4 text-center md:text-left text-xl">AI/ML</h3>
+                      <h3 className="font-semibold mb-4 text-center md:text-left text-xl text-primary">AI/ML</h3>
                       <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                          <Badge variant="secondary">TensorFlow</Badge>
-                          <Badge variant="secondary">PyTorch</Badge>
-                          <Badge variant="secondary">Scikit-learn</Badge>
-                          <Badge variant="secondary">OpenCV</Badge>
-                          <Badge variant="secondary">NumPy</Badge>
-                          <Badge variant="secondary">Pandas</Badge>
+                          <Badge>TensorFlow</Badge>
+                          <Badge>PyTorch</Badge>
+                          <Badge>Scikit-learn</Badge>
+                          <Badge>OpenCV</Badge>
+                          <Badge>NumPy</Badge>
+                          <Badge>Pandas</Badge>
                       </div>
                   </div>
               </div>
             </section>
             
-            <section id="education">
+            <section id="education" className="scroll-m-20">
                 <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Education</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                     <Card>
@@ -227,7 +231,7 @@ export default function Home() {
                 </div>
             </section>
             
-            <section id="achievements">
+            <section id="achievements" className="scroll-m-20">
                 <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Achievements</h2>
                 <div className="max-w-3xl mx-auto">
                   <ul className="space-y-4">
@@ -255,7 +259,7 @@ export default function Home() {
                 </div>
             </section>
 
-             <section id="contact" className="text-center py-10">
+             <section id="contact" className="text-center py-10 scroll-m-20">
                 <h2 className="text-3xl font-semibold mb-6 border-b pb-3">Contact Me</h2>
                 <div className="space-y-4 max-w-md mx-auto">
                     <div className="flex items-center justify-center gap-3">
@@ -278,3 +282,5 @@ export default function Home() {
   );
 }
 
+
+    
