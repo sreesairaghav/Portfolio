@@ -1,3 +1,186 @@
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+
 export default function Home() {
-  return <></>;
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <main className="container mx-auto p-4 md:p-8 lg:p-12">
+        <div className="flex flex-col md:flex-row gap-8 items-start">
+          <div className="w-full md:w-1/3 space-y-6">
+            <div className="flex flex-col items-center md:items-start">
+              <Avatar className="w-32 h-32 mb-4">
+                <AvatarImage src="https://placehold.co/200x200.png" alt="Sree Sai Raghav C" data-ai-hint="man portrait" />
+                <AvatarFallback>SR</AvatarFallback>
+              </Avatar>
+              <h1 className="text-3xl font-bold">Sree Sai Raghav C</h1>
+              <p className="text-primary">ML and IoT Enthusiast</p>
+            </div>
+
+            <div className="space-y-3 text-sm">
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-muted-foreground" />
+                <a href="mailto:sree23110160@snuchennai.edu.in" className="hover:text-primary">sree23110160@snuchennai.edu.in</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-muted-foreground" />
+                <span>+91 9962875610</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-muted-foreground" />
+                <span>Chennai, India</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Linkedin className="w-4 h-4 text-muted-foreground" />
+                <a href="https://www.linkedin.com/in/sree-sai-raghav-c-023822291/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">LinkedIn</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Github className="w-4 h-4 text-muted-foreground" />
+                <a href="https://github.com/sreesairaghav" target="_blank" rel="noopener noreferrer" className="hover:text-primary">GitHub</a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="w-full md:w-2/3 space-y-8">
+            <section id="about">
+              <h2 className="text-2xl font-semibold mb-4 border-b pb-2">About Me</h2>
+              <div className="space-y-4 text-muted-foreground">
+                <p>A passionate tech enthusiast exploring the intersection of Artificial Intelligence, Machine Learning, and the Internet of Things. I enjoy building smart, real-world applications that make life easier, more efficient, and better connected.</p>
+                <p>With hands-on internship experience, I’ve worked on ML models and big data analytics to solve meaningful problems. Whether it’s automating systems, analyzing complex datasets, or experimenting with IoT, I love turning ideas into reality.</p>
+                <p>Driven by curiosity and a builder’s mindset, I’m always learning, exploring, and creating.</p>
+                <p>Apart from studies, I am a Grade 4, Trinity College London certified Keyboard player. I am a filmmaker, having written and directed short films, and an academy-level cricket player.</p>
+              </div>
+            </section>
+
+            <section id="experience">
+              <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Professional Experience</h2>
+              <div className="space-y-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>ML Intern</CardTitle>
+                    <CardDescription>Beumer Group Middle East, Dubai (Onsite) | May 2025 - June 2025</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-2">
+                    <p className="text-muted-foreground">Worked with the Global Monitoring Center on big data and ML from Doha International Airport's GMC data, building two impactful AI projects.</p>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                      <li><strong>Fehlix:</strong> Forecasted sensor faults in baggage systems using ML models; deployed a fault prediction engine to improve maintenance response time.</li>
+                      <li><strong>Nexflight:</strong> Developed an optimization model to compute baggage transfer feasibility between flights, minimizing delays across airport logistics. Currently under deployment.</li>
+                    </ul>
+                     <p className="italic text-sm text-primary">Honoured to have been appreciated by the CEO of Beumer Group Middle East for my contributions.</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Student Ambassador</CardTitle>
+                    <CardDescription>Shiv Nadar University, Chennai | Jan 2025 - Present</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">Serving as a key point of contact for prospective students and parents, addressing queries about university life. I foster connections, guide applicants, and provide insights into academic programs and resources through various outreach initiatives.</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
+            
+            <section id="projects">
+              <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Projects</h2>
+              <div className="space-y-6">
+                 <Card>
+                  <CardHeader>
+                    <CardTitle>WattSight</CardTitle>
+                     <CardDescription>AI-powered web dashboard for EV charging stations.</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">Advanced dashboard for real-time monitoring, predictive analytics, and intelligent insights into electric vehicle charging stations.</p>
+                     <div className="flex gap-2">
+                        <Button variant="outline" size="sm" asChild><a href="https://wattsight-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Live Demo</a></Button>
+                        <Button variant="outline" size="sm" asChild><a href="https://github.com/sreesairaghav/WattSight" target="_blank" rel="noopener noreferrer">GitHub</a></Button>
+                    </div>
+                  </CardContent>
+                </Card>
+                 <Card>
+                  <CardHeader>
+                    <CardTitle>TragerX</CardTitle>
+                    <CardDescription>ROS-based autonomous trolley navigation system for smart environments.</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">Enhances passenger convenience by enabling autonomous trolleys to navigate seamlessly to key airport locations like check-in counters and boarding gates.</p>
+                     <p className="italic text-sm text-primary">Best Project Presentation at CEG Anna University, Chennai & Runner-up at IoT Verse, IIITDM Kanchipuram.</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
+            
+            <section id="skills">
+              <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Skills</h2>
+              <div className="space-y-4">
+                  <div>
+                      <h3 className="font-semibold mb-2">Programming</h3>
+                      <div className="flex flex-wrap gap-2">
+                          <Badge variant="secondary">Python</Badge>
+                          <Badge variant="secondary">C++</Badge>
+                          <Badge variant="secondary">Java</Badge>
+                          <Badge variant="secondary">SQL</Badge>
+                      </div>
+                  </div>
+                   <div>
+                      <h3 className="font-semibold mb-2">Tools</h3>
+                      <div className="flex flex-wrap gap-2">
+                          <Badge variant="secondary">Git</Badge>
+                          <Badge variant="secondary">ROS2</Badge>
+                          <Badge variant="secondary">SLAM</Badge>
+                          <Badge variant="secondary">Embedded Systems & Sensor Integration</Badge>
+                      </div>
+                  </div>
+                   <div>
+                      <h3 className="font-semibold mb-2">AI/ML</h3>
+                      <div className="flex flex-wrap gap-2">
+                          <Badge variant="secondary">TensorFlow</Badge>
+                          <Badge variant="secondary">PyTorch</Badge>
+                          <Badge variant="secondary">Scikit-learn</Badge>
+                          <Badge variant="secondary">OpenCV</Badge>
+                          <Badge variant="secondary">NumPy</Badge>
+                          <Badge variant="secondary">Pandas</Badge>
+                      </div>
+                  </div>
+              </div>
+            </section>
+            
+            <section id="education">
+                <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Education</h2>
+                <div className="space-y-4">
+                    <div>
+                        <h3 className="font-semibold">Shiv Nadar University, Chennai</h3>
+                        <p className="text-sm text-muted-foreground">Aug 2023 - Aug 2027</p>
+                        <p>Bachelor of Technology - Computer Science Engineering with IoT</p>
+                        <p className="text-sm">CGPA: 8.86</p>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold">DAV Public School, Chennai</h3>
+                        <p className="text-sm text-muted-foreground">Graduated 2023</p>
+                         <p className="text-sm">Served as the School Pupil Leader.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="achievements">
+                <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Achievements</h2>
+                <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                    <li>Recognized by Beumer CEO for impactful ML contributions.</li>
+                    <li>Best Project – TragerX (CEG Anna University, Chennai).</li>
+                    <li>Runner-Up – IoT-Verse Hackathon (IIITDM, Kanchipuram).</li>
+                    <li>Student Ambassador – Shiv Nadar University.</li>
+                    <li>School Pupil Leader – DAV Public School.</li>
+                </ul>
+            </section>
+
+          </div>
+        </div>
+      </main>
+    </div>
+  );
 }
+
+    
