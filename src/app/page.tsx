@@ -107,7 +107,7 @@ export default function Home() {
                      <p className="italic text-sm text-primary">Honoured to have been appreciated by the CEO of Beumer Group Middle East for my contributions.</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-accent">
+                <Card className="bg-secondary">
                   <CardHeader>
                     <CardTitle>Student Ambassador</CardTitle>
                     <CardDescription>Shiv Nadar University, Chennai | Jan 2025 - Present</CardDescription>
@@ -138,7 +138,7 @@ export default function Home() {
                           </div>
                         </CardContent>
                       </Card>
-                      <Card className="bg-accent">
+                      <Card className="bg-secondary">
                         <CardHeader>
                           <CardTitle>TragerX</CardTitle>
                           <CardDescription>ROS-based autonomous trolley navigation system.</CardDescription>
@@ -166,7 +166,7 @@ export default function Home() {
                           <p className="text-muted-foreground">Forecasted sensor faults in baggage systems using ML models; deployed a fault prediction engine to improve maintenance response time.</p>
                         </CardContent>
                       </Card>
-                      <Card className="bg-accent">
+                      <Card className="bg-secondary">
                         <CardHeader>
                           <CardTitle>Nexflight</CardTitle>
                           <CardDescription>Baggage transfer optimization model.</CardDescription>
@@ -194,7 +194,7 @@ export default function Home() {
                           <Badge>SQL</Badge>
                       </CardContent>
                   </Card>
-                  <Card className="bg-secondary">
+                  <Card className="bg-accent">
                        <CardHeader>
                         <CardTitle className="text-center text-primary">Tools</CardTitle>
                       </CardHeader>
@@ -235,7 +235,7 @@ export default function Home() {
                             <p className="text-sm">CGPA: 8.86</p>
                         </CardContent>
                     </Card>
-                    <Card className="bg-accent">
+                    <Card className="bg-secondary">
                         <CardHeader>
                             <CardTitle>DAV Public School, Chennai</CardTitle>
                             <CardDescription>Graduated 2023</CardDescription>
