@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 export const metadata: Metadata = {
   title: 'Sree Sai Raghav C | Portfolio',
   description: 'Personal portfolio of Sree Sai Raghav C, an ML and IoT enthusiast.',
+  icons: null
 };
 
 export default function RootLayout({
