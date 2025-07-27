@@ -1,5 +1,5 @@
 "use client";
-import raghavImg from "@/raghav.png"; // at the top of your file
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -53,7 +53,7 @@ export default function Home() {
       <main className="container mx-auto">
         <section id="home" className="flex flex-col items-center justify-center text-center min-h-[calc(100vh-3.5rem)] py-20 gap-8 bg-secondary">
           <Avatar className="w-48 h-48">
-            <AvatarImage src={raghavImg} alt="Sree Sai Raghav C" />
+          <AvatarImage src="/raghav.png" alt="Sree Sai Raghav C" /> 
             <AvatarFallback>SR</AvatarFallback>
           </Avatar>
           <div className="space-y-2">
