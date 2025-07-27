@@ -1,4 +1,6 @@
 
+"use client";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -6,45 +8,105 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 export default function Home() {
+
+  const navLinks = [
+    { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
+    { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
+    { name: "Education", href: "#education" },
+    { name: "Achievements", href: "#achievements" },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <main className="container mx-auto p-4 md:p-8 lg:p-12">
-        <div className="flex flex-col md:flex-row gap-8 items-start">
-          <div className="w-full md:w-1/3 space-y-6">
-            <div className="flex flex-col items-center md:items-start">
-              <Avatar className="w-32 h-32 mb-4">
-                <AvatarImage src="https://placehold.co/200x200.png" alt="Sree Sai Raghav C" data-ai-hint="man portrait" />
-                <AvatarFallback>SR</AvatarFallback>
-              </Avatar>
-              <h1 className="text-3xl font-bold">Sree Sai Raghav C</h1>
-              <p className="text-primary">ML and IoT Enthusiast</p>
-            </div>
-
-            <div className="space-y-3 text-sm">
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-muted-foreground" />
-                <a href="mailto:sree23110160@snuchennai.edu.in" className="hover:text-primary">sree23110160@snuchennai.edu.in</a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-muted-foreground" />
-                <span>+91 9962875610</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-muted-foreground" />
-                <span>Chennai, India</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Linkedin className="w-4 h-4 text-muted-foreground" />
-                <a href="https://www.linkedin.com/in/sree-sai-raghav-c-023822291/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">LinkedIn</a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Github className="w-4 h-4 text-muted-foreground" />
-                <a href="https://github.com/sreesairaghav" target="_blank" rel="noopener noreferrer" className="hover:text-primary">GitHub</a>
-              </div>
-            </div>
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container mx-auto flex h-14 items-center">
+          <nav className="hidden md:flex gap-4">
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
+                {link.name}
+              </a>
+            ))}
+          </nav>
+          <div className="flex md:hidden flex-1 items-center justify-between">
+             <h1 className="text-lg font-bold">Sree Sai Raghav C</h1>
           </div>
-          
-          <div className="w-full md:w-2/3 space-y-8">
+        </div>
+      </header>
+
+      <main className="container mx-auto p-4 md:p-8 lg:p-12">
+        <section id="home" className="flex flex-col md:flex-row items-center justify-center text-center md:text-left py-20 md:py-32 gap-8">
+            <Avatar className="w-48 h-48">
+              <AvatarImage src="https://firebasestudio-hosting.web.app/images/sree-sai-raghav-c.jpeg" alt="Sree Sai Raghav C" />
+              <AvatarFallback>SR</AvatarFallback>
+            </Avatar>
+            <div className="space-y-2">
+              <h1 className="text-4xl md:text-5xl font-bold">Sree Sai Raghav C</h1>
+              <p className="text-xl md:text-2xl text-primary">ML and IoT Enthusiast</p>
+               <div className="flex justify-center md:justify-start items-center gap-4 pt-4">
+                <a href="https://www.linkedin.com/in/sree-sai-raghav-c-023822291/" target="_blank" rel="noopener noreferrer" className="hover:text-primary"><Linkedin /></a>
+                <a href="https://github.com/sreesairaghav" target="_blank" rel="noopener noreferrer" className="hover:text-primary"><Github /></a>
+                <a href="mailto:sree23110160@snuchennai.edu.in" className="hover:text-primary"><Mail /></a>
+              </div>
+            </div>
+        </section>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          <div className="md:col-span-1 space-y-8">
+             <section id="contact" className="space-y-3 text-sm">
+                <h2 className="text-xl font-semibold mb-4 border-b pb-2 md:hidden">Contact</h2>
+                <div className="flex items-center gap-2">
+                  <Mail className="w-4 h-4 text-muted-foreground" />
+                  <a href="mailto:sree23110160@snuchennai.edu.in" className="hover:text-primary">sree23110160@snuchennai.edu.in</a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-muted-foreground" />
+                  <span>+91 9962875610</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-muted-foreground" />
+                  <span>Chennai, India</span>
+                </div>
+              </section>
+
+             <section id="skills">
+              <h2 className="text-xl font-semibold mb-4 border-b pb-2">Skills</h2>
+              <div className="space-y-4">
+                  <div>
+                      <h3 className="font-semibold mb-2">Programming</h3>
+                      <div className="flex flex-wrap gap-2">
+                          <Badge variant="secondary">Python</Badge>
+                          <Badge variant="secondary">C++</Badge>
+                          <Badge variant="secondary">Java</Badge>
+                          <Badge variant="secondary">SQL</Badge>
+                      </div>
+                  </div>
+                   <div>
+                      <h3 className="font-semibold mb-2">Tools</h3>
+                      <div className="flex flex-wrap gap-2">
+                          <Badge variant="secondary">Git</Badge>
+                          <Badge variant="secondary">ROS2</Badge>
+                          <Badge variant="secondary">SLAM</Badge>
+                          <Badge variant="secondary">Embedded Systems & Sensor Integration</Badge>
+                      </div>
+                  </div>
+                   <div>
+                      <h3 className="font-semibold mb-2">AI/ML</h3>
+                      <div className="flex flex-wrap gap-2">
+                          <Badge variant="secondary">TensorFlow</Badge>
+                          <Badge variant="secondary">PyTorch</Badge>
+                          <Badge variant="secondary">Scikit-learn</Badge>
+                          <Badge variant="secondary">OpenCV</Badge>
+                          <Badge variant="secondary">NumPy</Badge>
+                          <Badge variant="secondary">Pandas</Badge>
+                      </div>
+                  </div>
+              </div>
+            </section>
+          </div>
+
+          <div className="md:col-span-2 space-y-12">
             <section id="about">
               <h2 className="text-2xl font-semibold mb-4 border-b pb-2">About Me</h2>
               <div className="space-y-4 text-muted-foreground">
@@ -113,41 +175,6 @@ export default function Home() {
               </div>
             </section>
             
-            <section id="skills">
-              <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Skills</h2>
-              <div className="space-y-4">
-                  <div>
-                      <h3 className="font-semibold mb-2">Programming</h3>
-                      <div className="flex flex-wrap gap-2">
-                          <Badge variant="secondary">Python</Badge>
-                          <Badge variant="secondary">C++</Badge>
-                          <Badge variant="secondary">Java</Badge>
-                          <Badge variant="secondary">SQL</Badge>
-                      </div>
-                  </div>
-                   <div>
-                      <h3 className="font-semibold mb-2">Tools</h3>
-                      <div className="flex flex-wrap gap-2">
-                          <Badge variant="secondary">Git</Badge>
-                          <Badge variant="secondary">ROS2</Badge>
-                          <Badge variant="secondary">SLAM</Badge>
-                          <Badge variant="secondary">Embedded Systems & Sensor Integration</Badge>
-                      </div>
-                  </div>
-                   <div>
-                      <h3 className="font-semibold mb-2">AI/ML</h3>
-                      <div className="flex flex-wrap gap-2">
-                          <Badge variant="secondary">TensorFlow</Badge>
-                          <Badge variant="secondary">PyTorch</Badge>
-                          <Badge variant="secondary">Scikit-learn</Badge>
-                          <Badge variant="secondary">OpenCV</Badge>
-                          <Badge variant="secondary">NumPy</Badge>
-                          <Badge variant="secondary">Pandas</Badge>
-                      </div>
-                  </div>
-              </div>
-            </section>
-            
             <section id="education">
                 <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Education</h2>
                 <div className="space-y-4">
@@ -182,5 +209,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
