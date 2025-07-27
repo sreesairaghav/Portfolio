@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Github, Linkedin, Mail, MapPin, Phone, Menu } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Menu, Trophy } from "lucide-react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 
 export default function Home() {
@@ -111,30 +111,58 @@ export default function Home() {
             
             <section id="projects">
               <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Projects</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                 <Card>
-                  <CardHeader>
-                    <CardTitle>WattSight</CardTitle>
-                     <CardDescription>AI-powered web dashboard for EV charging stations.</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">Advanced dashboard for real-time monitoring, predictive analytics, and intelligent insights into electric vehicle charging stations.</p>
-                     <div className="flex gap-2">
-                        <Button variant="outline" size="sm" asChild><a href="https://wattsight-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Live Demo</a></Button>
-                        <Button variant="outline" size="sm" asChild><a href="https://github.com/sreesairaghav/WattSight" target="_blank" rel="noopener noreferrer">GitHub</a></Button>
+              <div className="max-w-4xl mx-auto space-y-8">
+                <div>
+                    <h3 className="text-2xl font-semibold mb-4 text-center text-primary">Personal Projects</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>WattSight</CardTitle>
+                          <CardDescription>AI-powered web dashboard for EV charging stations.</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-muted-foreground mb-4">Advanced dashboard for real-time monitoring, predictive analytics, and intelligent insights into electric vehicle charging stations.</p>
+                          <div className="flex gap-2">
+                              <Button variant="outline" size="sm" asChild><a href="https://wattsight-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Live Demo</a></Button>
+                              <Button variant="outline" size="sm" asChild><a href="https://github.com/sreesairaghav/WattSight" target="_blank" rel="noopener noreferrer">GitHub</a></Button>
+                          </div>
+                        </CardContent>
+                      </Card>
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>TragerX</CardTitle>
+                          <CardDescription>ROS-based autonomous trolley navigation system.</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-muted-foreground mb-4">Enhances passenger convenience by enabling autonomous trolleys to navigate seamlessly to key airport locations like check-in counters and boarding gates.</p>
+                          <p className="italic text-sm text-primary">Best Project Presentation at CEG Anna University, Chennai &amp; Runner-up at IoT Verse, IIITDM Kanchipuram.</p>
+                        </CardContent>
+                      </Card>
                     </div>
-                  </CardContent>
-                </Card>
-                 <Card>
-                  <CardHeader>
-                    <CardTitle>TragerX</CardTitle>
-                    <CardDescription>ROS-based autonomous trolley navigation system.</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">Enhances passenger convenience by enabling autonomous trolleys to navigate seamlessly to key airport locations like check-in counters and boarding gates.</p>
-                     <p className="italic text-sm text-primary">Best Project Presentation at CEG Anna University, Chennai &amp; Runner-up at IoT Verse, IIITDM Kanchipuram.</p>
-                  </CardContent>
-                </Card>
+                </div>
+                 <div>
+                    <h3 className="text-2xl font-semibold mb-4 text-center text-primary">Industrial Projects (Beumer Group)</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>Fehlix</CardTitle>
+                          <CardDescription>Predictive maintenance for baggage handling systems.</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-muted-foreground">Forecasted sensor faults in baggage systems using ML models; deployed a fault prediction engine to improve maintenance response time.</p>
+                        </CardContent>
+                      </Card>
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>Nexflight</CardTitle>
+                          <CardDescription>Baggage transfer optimization model.</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-muted-foreground">Developed an optimization model to compute baggage transfer feasibility between flights, minimizing delays across airport logistics. Currently under deployment.</p>
+                        </CardContent>
+                      </Card>
+                    </div>
+                </div>
               </div>
             </section>
 
@@ -175,30 +203,56 @@ export default function Home() {
             
             <section id="education">
                 <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Education</h2>
-                <div className="space-y-6 max-w-2xl mx-auto">
-                    <div className="text-center">
-                        <h3 className="font-semibold text-xl">Shiv Nadar University, Chennai</h3>
-                        <p className="text-sm text-muted-foreground">Aug 2023 - Aug 2027</p>
-                        <p>Bachelor of Technology - Computer Science Engineering with IoT</p>
-                        <p className="text-sm">CGPA: 8.86</p>
-                    </div>
-                    <div className="text-center">
-                        <h3 className="font-semibold text-xl">DAV Public School, Chennai</h3>
-                        <p className="text-sm text-muted-foreground">Graduated 2023</p>
-                         <p className="text-sm">Served as the School Pupil Leader.</p>
-                    </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <Card>
+                        <CardHeader>
+                            <CardTitle>Shiv Nadar University, Chennai</CardTitle>
+                            <CardDescription>Aug 2023 - Aug 2027</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-muted-foreground">Bachelor of Technology - Computer Science Engineering with IoT</p>
+                            <p className="text-sm">CGPA: 8.86</p>
+                        </CardContent>
+                    </Card>
+                    <Card>
+                        <CardHeader>
+                            <CardTitle>DAV Public School, Chennai</CardTitle>
+                            <CardDescription>Graduated 2023</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-muted-foreground">Served as the School Pupil Leader.</p>
+                            <p className="text-sm">12th CBSE: 92.2% | 10th CBSE: 94.8%</p>
+                        </CardContent>
+                    </Card>
                 </div>
             </section>
             
             <section id="achievements">
                 <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Achievements</h2>
-                <ul className="list-disc list-inside text-muted-foreground space-y-2 max-w-2xl mx-auto">
-                    <li>Recognized by Beumer CEO for impactful ML contributions.</li>
-                    <li>Best Project – TragerX (CEG Anna University, Chennai).</li>
-                    <li>Runner-Up – IoT-Verse Hackathon (IIITDM, Kanchipuram).</li>
-                    <li>Student Ambassador – Shiv Nadar University.</li>
-                    <li>School Pupil Leader – DAV Public School.</li>
-                </ul>
+                <div className="max-w-3xl mx-auto">
+                  <ul className="space-y-4">
+                      <li className="flex items-start gap-4">
+                          <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                          <p className="text-muted-foreground">Recognized by the CEO of Beumer Group Middle East for impactful ML contributions during my internship.</p>
+                      </li>
+                      <li className="flex items-start gap-4">
+                          <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                          <p className="text-muted-foreground">Awarded <span className="font-semibold text-foreground">Best Project</span> for "TragerX" at CEG Anna University, Chennai.</p>
+                      </li>
+                      <li className="flex items-start gap-4">
+                          <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                          <p className="text-muted-foreground">Achieved <span className="font-semibold text-foreground">Runner-Up</span> position in the IoT-Verse Hackathon at IIITDM, Kanchipuram.</p>
+                      </li>
+                       <li className="flex items-start gap-4">
+                          <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                          <p className="text-muted-foreground">Selected as a <span className="font-semibold text-foreground">Student Ambassador</span> at Shiv Nadar University, representing the institution to prospective students.</p>
+                      </li>
+                      <li className="flex items-start gap-4">
+                          <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                          <p className="text-muted-foreground">Served as the <span className="font-semibold text-foreground">School Pupil Leader</span> at DAV Public School, leading the student body.</p>
+                      </li>
+                  </ul>
+                </div>
             </section>
 
              <section id="contact" className="text-center py-10">
@@ -224,4 +278,3 @@ export default function Home() {
   );
 }
 
-    
