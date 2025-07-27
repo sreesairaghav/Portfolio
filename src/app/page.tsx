@@ -24,7 +24,7 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto flex h-14 items-center justify-between">
-          <a href="#" className="text-lg font-bold scroll-m-20">Sree Sai Raghav C</a>
+          <a href="#" className="text-lg font-bold scroll-m-20">My Portfolio</a>
           <nav className="hidden md:flex gap-4">
             {navLinks.map((link) => (
               <a key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
@@ -107,7 +107,7 @@ export default function Home() {
                      <p className="italic text-sm text-primary">Honoured to have been appreciated by the CEO of Beumer Group Middle East for my contributions.</p>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="bg-accent">
                   <CardHeader>
                     <CardTitle>Student Ambassador</CardTitle>
                     <CardDescription>Shiv Nadar University, Chennai | Jan 2025 - Present</CardDescription>
@@ -125,7 +125,7 @@ export default function Home() {
                 <div>
                     <h3 className="text-2xl font-semibold mb-4 text-center text-primary">Personal Projects</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <Card>
+                      <Card className="bg-secondary">
                         <CardHeader>
                           <CardTitle>WattSight</CardTitle>
                           <CardDescription>AI-powered web dashboard for EV charging stations.</CardDescription>
@@ -138,7 +138,7 @@ export default function Home() {
                           </div>
                         </CardContent>
                       </Card>
-                      <Card>
+                      <Card className="bg-accent">
                         <CardHeader>
                           <CardTitle>TragerX</CardTitle>
                           <CardDescription>ROS-based autonomous trolley navigation system.</CardDescription>
@@ -166,7 +166,7 @@ export default function Home() {
                           <p className="text-muted-foreground">Forecasted sensor faults in baggage systems using ML models; deployed a fault prediction engine to improve maintenance response time.</p>
                         </CardContent>
                       </Card>
-                      <Card className="bg-secondary">
+                      <Card className="bg-accent">
                         <CardHeader>
                           <CardTitle>Nexflight</CardTitle>
                           <CardDescription>Baggage transfer optimization model.</CardDescription>
@@ -194,7 +194,7 @@ export default function Home() {
                           <Badge>SQL</Badge>
                       </CardContent>
                   </Card>
-                  <Card className="bg-accent">
+                  <Card className="bg-secondary">
                        <CardHeader>
                         <CardTitle className="text-center text-primary">Tools</CardTitle>
                       </CardHeader>
@@ -235,7 +235,7 @@ export default function Home() {
                             <p className="text-sm">CGPA: 8.86</p>
                         </CardContent>
                     </Card>
-                    <Card className="bg-secondary">
+                    <Card className="bg-accent">
                         <CardHeader>
                             <CardTitle>DAV Public School, Chennai</CardTitle>
                             <CardDescription>Graduated 2023</CardDescription>
@@ -298,4 +298,6 @@ export default function Home() {
     </div>
   );
     
+    
+
     
