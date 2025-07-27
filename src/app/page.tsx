@@ -1,5 +1,5 @@
 
-"use client";
+      "use client";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -72,11 +72,21 @@ export default function Home() {
         <div className="px-4 md:px-8 lg:px-12 py-16 space-y-16">
             <section id="about" className="scroll-m-20">
               <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">About Me</h2>
-              <div className="max-w-3xl mx-auto space-y-4 text-muted-foreground text-center md:text-left">
-                <p>A passionate tech enthusiast exploring the intersection of Artificial Intelligence, Machine Learning, and the Internet of Things. I enjoy building smart, real-world applications that make life easier, more efficient, and better connected.</p>
-                <p>With hands-on internship experience, I’ve worked on ML models and big data analytics to solve meaningful problems. Whether it’s automating systems, analyzing complex datasets, or experimenting with IoT, I love turning ideas into reality.</p>
-                <p>Driven by curiosity and a builder’s mindset, I’m always learning, exploring, and creating.</p>
-                <p>Apart from studies, I am a Grade 4, Trinity College London certified Keyboard player. I am a filmmaker, having written and directed short films, and an academy-level cricket player.</p>
+              <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="md:col-span-2 space-y-4 text-muted-foreground text-left">
+                  <p>A passionate tech enthusiast exploring the intersection of Artificial Intelligence, Machine Learning, and the Internet of Things. I enjoy building smart, real-world applications that make life easier, more efficient, and better connected.</p>
+                  <p>With hands-on internship experience, I’ve worked on ML models and big data analytics to solve meaningful problems. Whether it’s automating systems, analyzing complex datasets, or experimenting with IoT, I love turning ideas into reality.</p>
+                  <p>Driven by curiosity and a builder’s mindset, I’m always learning, exploring, and creating.</p>
+                </div>
+                <Card className="bg-accent">
+                    <CardHeader>
+                        <CardTitle>Beyond Tech</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-muted-foreground space-y-2">
+                      <p>Apart from studies, I am a Grade 4, Trinity College London certified Keyboard player.</p>
+                      <p>I am a filmmaker, having written and directed short films, and an academy-level cricket player.</p>
+                    </CardContent>
+                </Card>
               </div>
             </section>
 
@@ -173,35 +183,41 @@ export default function Home() {
              <section id="skills" className="scroll-m-20">
               <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Skills</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                  <div>
-                      <h3 className="font-semibold mb-4 text-center md:text-left text-xl text-primary">Programming</h3>
-                      <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                  <Card className="bg-secondary">
+                      <CardHeader>
+                        <CardTitle className="text-center text-primary">Programming</CardTitle>
+                      </CardHeader>
+                      <CardContent className="flex flex-wrap gap-2 justify-center">
                           <Badge>Python</Badge>
                           <Badge>C++</Badge>
                           <Badge>Java</Badge>
                           <Badge>SQL</Badge>
-                      </div>
-                  </div>
-                   <div>
-                      <h3 className="font-semibold mb-4 text-center md:text-left text-xl text-primary">Tools</h3>
-                      <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                      </CardContent>
+                  </Card>
+                  <Card className="bg-secondary">
+                       <CardHeader>
+                        <CardTitle className="text-center text-primary">Tools</CardTitle>
+                      </CardHeader>
+                      <CardContent className="flex flex-wrap gap-2 justify-center">
                           <Badge>Git</Badge>
                           <Badge>ROS2</Badge>
                           <Badge>SLAM</Badge>
                           <Badge>Embedded Systems &amp; Sensor Integration</Badge>
-                      </div>
-                  </div>
-                   <div>
-                      <h3 className="font-semibold mb-4 text-center md:text-left text-xl text-primary">AI/ML</h3>
-                      <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                      </CardContent>
+                  </Card>
+                   <Card className="bg-secondary">
+                       <CardHeader>
+                        <CardTitle className="text-center text-primary">AI/ML</CardTitle>
+                      </CardHeader>
+                      <CardContent className="flex flex-wrap gap-2 justify-center">
                           <Badge>TensorFlow</Badge>
                           <Badge>PyTorch</Badge>
                           <Badge>Scikit-learn</Badge>
                           <Badge>OpenCV</Badge>
                           <Badge>NumPy</Badge>
                           <Badge>Pandas</Badge>
-                      </div>
-                  </div>
+                      </CardContent>
+                  </Card>
               </div>
             </section>
             
@@ -280,7 +296,4 @@ export default function Home() {
       </main>
     </div>
   );
-}
-
-
     
