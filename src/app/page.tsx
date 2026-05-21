@@ -73,8 +73,8 @@ export default function Home() {
             <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="md:col-span-2 space-y-4 text-muted-foreground text-left">
                 <p>A passionate tech enthusiast exploring the intersection of Artificial Intelligence, Machine Learning, and the Internet of Things. I enjoy building smart, real-world applications to solve problems.</p>
-                <p>With hands-on internship experience, I’ve worked on ML models and big data analytics to solve meaningful problems. Whether it’s automating systems, analyzing complex datasets, or developing new solutions, I'm driven by curiosity and a builder’s mindset.</p>
-                <p>Driven by curiosity and a builder’s mindset, I’m always learning, exploring, and creating. I am also strong in leadership and product management, bringing a strategic approach to the projects I build.</p>
+                <p>With hands-on internship experience, I&apos;ve worked on ML models and big data analytics to solve meaningful problems. Whether it&apos;s automating systems, analyzing complex datasets, or developing new solutions, I&apos;m driven by curiosity and a builder&apos;s mindset.</p>
+                <p>Driven by curiosity and a builder&apos;s mindset, I&apos;m always learning, exploring, and creating. I am also strong in leadership and product management, bringing a strategic approach to the projects I build.</p>
               </div>
               <Card className="bg-accent flex flex-col justify-center">
                 <CardHeader>
@@ -97,7 +97,7 @@ export default function Home() {
                   <CardDescription>Beumer Group Middle East, Dubai (Onsite) | May 2025 - June 2025</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-2">
-                  <p className="text-muted-foreground">Worked with the Global Monitoring Center on big data and ML from Doha International Airport's GMC data, building two impactful AI projects.</p>
+                  <p className="text-muted-foreground">Worked with the Global Monitoring Center on big data and ML from Doha International Airport&apos;s GMC data, building two impactful AI projects.</p>
                   <ul className="list-disc list-inside text-muted-foreground space-y-1">
                     <li><strong>Fehlix:</strong> Forecasted sensor faults in baggage systems using ML models; deployed a fault prediction engine to improve maintenance response time.</li>
                     <li><strong>Nexflight:</strong> Developed an optimization model to compute baggage transfer feasibility between flights, minimizing delays across airport logistics. Currently under further development.</li>
@@ -302,11 +302,11 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
                   <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-muted-foreground">Awarded <span className="font-semibold text-foreground">Best Project</span> for "PayFluxa" at CEG Anna University, Chennai - ITRIX '26.</p>
+                  <p className="text-muted-foreground">Awarded <span className="font-semibold text-foreground">Best Project</span> for &quot;PayFluxa&quot; at CEG Anna University, Chennai - ITRIX &apos;26.</p>
                 </li>
                 <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
                   <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-muted-foreground">Awarded <span className="font-semibold text-foreground">Best Project</span> for "TragerX" at CEG Anna University, Chennai - ITRIX '25.</p>
+                  <p className="text-muted-foreground">Awarded <span className="font-semibold text-foreground">Best Project</span> for &quot;TragerX&quot; at CEG Anna University, Chennai - ITRIX &apos;25.</p>
                 </li>
                 <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
                   <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
