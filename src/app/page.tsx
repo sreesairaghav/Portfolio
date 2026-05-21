@@ -125,7 +125,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <Card className="bg-secondary">
                     <CardHeader>
-                      <CardTitle>FinZen</CardTitle>
+                      <CardTitle>PayFluxa</CardTitle>
                       <CardDescription>AI-Powered Financial Digital Twin & Risk Prediction System</CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -299,7 +299,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
                   <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-muted-foreground">Awarded <span className="font-semibold text-foreground">Best Project</span> for "FinZen" at CEG Anna University, Chennai - ITRIX '26.</p>
+                  <p className="text-muted-foreground">Awarded <span className="font-semibold text-foreground">Best Project</span> for "PayFluxa" at CEG Anna University, Chennai - ITRIX '26.</p>
                 </li>
                 <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
                   <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
