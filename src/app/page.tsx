@@ -1,352 +1,383 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar";
+
 import { Badge } from "@/components/ui/badge";
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Github, Linkedin, Mail, MapPin, Phone, Menu, Trophy, ExternalLink } from "lucide-react";
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+  Trophy,
+  Menu,
+  ExternalLink,
+} from "lucide-react";
 
 export default function Home() {
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "Education", href: "#education" },
-    { name: "Achievements", href: "#achievements" },
-    { name: "Contact", href: "#contact" },
+    "About",
+    "Experience",
+    "Projects",
+    "Skills",
+    "Education",
+    "Achievements",
+    "Contact",
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="max-w-5xl mx-auto px-6 md:px-8 flex h-14 items-center justify-between">
-          <a href="#home" className="text-lg font-bold scroll-m-20">My Portfolio</a>
-          <nav className="hidden md:flex gap-6">
-            {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
-                {link.name}
+    <div className="min-h-screen scroll-smooth bg-background text-foreground">
+
+      {/* NAVBAR */}
+
+      <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur">
+
+        <div className="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+
+          <a
+            href="#home"
+            className="font-bold text-xl"
+          >
+            My Portfolio
+          </a>
+
+          <nav className="hidden md:flex gap-8">
+
+            {navLinks.map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="text-muted-foreground hover:text-primary transition"
+              >
+                {item}
               </a>
             ))}
+
           </nav>
+
           <Sheet>
+
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
+
+              <Button
+                size="icon"
+                variant="ghost"
+                className="md:hidden"
+              >
                 <Menu />
-                <span className="sr-only">Toggle Menu</span>
               </Button>
+
             </SheetTrigger>
+
             <SheetContent side="left">
-              <div className="flex flex-col gap-4 p-4">
-                {navLinks.map((link) => (
-                  <a key={link.href} href={link.href} className="text-base font-medium text-muted-foreground transition-colors hover:text-primary">
-                    {link.name}
+
+              <div className="flex flex-col gap-5 mt-10">
+
+                {navLinks.map((item) => (
+
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase()}`}
+                  >
+                    {item}
                   </a>
+
                 ))}
+
               </div>
+
             </SheetContent>
+
           </Sheet>
+
         </div>
+
       </header>
 
-      <main className="container mx-auto">
-        <section id="home" className="flex flex-col items-center justify-center text-center min-h-[calc(100vh-3.5rem)] py-20 gap-8 bg-secondary">
-            <Avatar className="w-48 h-48">
-              <AvatarImage src="/raghav.png" alt="Sree Sai Raghav C" />
-              <AvatarFallback>SR</AvatarFallback>
-            </Avatar>
-            <div className="space-y-2">
-              <h1 className="text-4xl md:text-5xl font-bold">Sree Sai Raghav C</h1>
-              <p className="text-xl md:text-2xl text-primary">ML and IoT Enthusiast</p>
-               <div className="flex justify-center items-center gap-4 pt-4">
-                <a href="https://www.linkedin.com/in/sree-sai-raghav-c-023822291/" target="_blank" rel="noopener noreferrer" className="hover:text-primary"><Linkedin /></a>
-                <a href="https://github.com/sreesairaghav" target="_blank" rel="noopener noreferrer" className="hover:text-primary"><Github /></a>
-                <a href="mailto:sreesairaghav13@gmail.com" className="hover:text-primary"><Mail /></a>
-              </div>
+      <main>
+
+        {/* HERO */}
+
+        <section
+          id="home"
+          className="min-h-screen flex flex-col justify-center items-center text-center px-6 gap-6"
+        >
+
+          <Avatar className="h-48 w-48">
+
+            <AvatarImage
+              src="/raghav.png"
+              alt="Sree Sai Raghav"
+            />
+
+            <AvatarFallback>
+              SR
+            </AvatarFallback>
+
+          </Avatar>
+
+          <div>
+
+            <h1 className="text-5xl font-bold">
+              Sree Sai Raghav C
+            </h1>
+
+            <p className="text-primary text-2xl mt-2">
+              ML • AI • IoT Enthusiast
+            </p>
+
+            <div className="flex justify-center gap-5 mt-5">
+
+              <a
+                href="https://github.com/sreesairaghav"
+                target="_blank"
+                aria-label="Github"
+              >
+                <Github />
+              </a>
+
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <Linkedin />
+              </a>
+
+              <a
+                href="mailto:sreesairaghav13@gmail.com"
+                aria-label="Mail"
+              >
+                <Mail />
+              </a>
+
             </div>
+
+          </div>
+
         </section>
 
-        <div className="px-4 md:px-8 lg:px-12 py-16 space-y-16">
-          <section id="about" className="scroll-m-20">
-            <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">About Me</h2>
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="md:col-span-2 space-y-4 text-muted-foreground text-left">
-                <p>A passionate tech enthusiast exploring the intersection of Artificial Intelligence, Machine Learning, and the Internet of Things. I enjoy building smart, real-world applications to solve problems.</p>
-                <p>With hands-on internship experience, I&apos;ve worked on ML models and big data analytics to solve meaningful problems. Whether it&apos;s automating systems, analyzing complex datasets, or developing new solutions, I&apos;m driven by curiosity and a builder&apos;s mindset.</p>
-                <p>Driven by curiosity and a builder&apos;s mindset, I&apos;m always learning, exploring, and creating. I am also strong in leadership and product management, bringing a strategic approach to the projects I build.</p>
-              </div>
-              <Card className="bg-accent flex flex-col justify-center">
-                <CardHeader>
-                  <CardTitle>Beyond Tech</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground space-y-2">
-                  <p>Apart from studies, I am a Grade 4, Trinity College London certified Keyboard player.</p>
-                  <p>I am a filmmaker, having written and directed short films, and an academy-level cricket player.</p>
-                </CardContent>
-              </Card>
+        {/* ABOUT */}
+
+        <section
+          id="about"
+          className="max-w-6xl mx-auto py-20 px-6"
+        >
+
+          <h2 className="text-3xl font-bold mb-10 text-center">
+            About Me
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+
+            <div className="md:col-span-2">
+
+              <p className="text-muted-foreground">
+
+                Analytical thinker and problem solver with
+                experience in AI, predictive systems,
+                IoT and data-driven applications.
+                Strong in communication, leadership,
+                and product management while building
+                impactful technology.
+
+              </p>
+
             </div>
-          </section>
 
-          <section id="experience" className="scroll-m-20">
-            <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Professional Experience</h2>
-            <div className="space-y-6 max-w-4xl mx-auto">
-              <Card className="bg-secondary">
-                <CardHeader>
-                  <CardTitle>ML Intern</CardTitle>
-                  <CardDescription>Beumer Group Middle East, Dubai (Onsite) | May 2025 - June 2025</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  <p className="text-muted-foreground">Worked with the Global Monitoring Center on big data and ML from Doha International Airport&apos;s GMC data, building two impactful AI projects.</p>
-                  <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                    <li><strong>Fehlix:</strong> Forecasted sensor faults in baggage systems using ML models; deployed a fault prediction engine to improve maintenance response time.</li>
-                    <li><strong>Nexflight:</strong> Developed an optimization model to compute baggage transfer feasibility between flights, minimizing delays across airport logistics. Currently under further development.</li>
-                  </ul>
-                  <p className="italic text-sm text-primary">Honoured to have been appreciated by the CEO of Beumer Group Middle East for my contributions.</p>
+            <Card>
+
+              <CardHeader>
+
+                <CardTitle>
+                  Beyond Tech
+                </CardTitle>
+
+              </CardHeader>
+
+              <CardContent>
+
+                Keyboard player • Filmmaker • Cricket player
+
+              </CardContent>
+
+            </Card>
+
+          </div>
+
+        </section>
+
+        {/* SKILLS */}
+
+        <section
+          id="skills"
+          className="py-20 px-6"
+        >
+
+          <h2 className="text-center text-3xl font-bold mb-10">
+            Skills
+          </h2>
+
+          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+
+            <Card>
+
+              <CardHeader>
+                <CardTitle>Programming</CardTitle>
+              </CardHeader>
+
+              <CardContent className="flex flex-wrap gap-2">
+
+                <Badge>Python</Badge>
+                <Badge>Java</Badge>
+                <Badge>C++</Badge>
+                <Badge>SQL</Badge>
+                <Badge>JS</Badge>
+
+              </CardContent>
+
+            </Card>
+
+            <Card>
+
+              <CardHeader>
+                <CardTitle>AI / ML</CardTitle>
+              </CardHeader>
+
+              <CardContent className="flex flex-wrap gap-2">
+
+                <Badge>TensorFlow</Badge>
+                <Badge>Pandas</Badge>
+                <Badge>Scikit</Badge>
+
+              </CardContent>
+
+            </Card>
+
+            <Card>
+
+              <CardHeader>
+                <CardTitle>Tools</CardTitle>
+              </CardHeader>
+
+              <CardContent className="flex flex-wrap gap-2">
+
+                <Badge>Git</Badge>
+                <Badge>Linux</Badge>
+                <Badge>FastAPI</Badge>
+
+              </CardContent>
+
+            </Card>
+
+          </div>
+
+        </section>
+
+        {/* ACHIEVEMENTS */}
+
+        <section
+          id="achievements"
+          className="py-20 px-6"
+        >
+
+          <h2 className="text-center text-3xl font-bold mb-10">
+            Achievements
+          </h2>
+
+          <div className="max-w-4xl mx-auto space-y-4">
+
+            {[
+              "Recognized by CEO of Beumer Group",
+              "Best Project — PayFluxa",
+              "Best Project — TragerX",
+              "Runner Up — IIITDM",
+            ].map((item) => (
+
+              <Card key={item}>
+
+                <CardContent className="flex gap-4 py-5">
+
+                  <Trophy />
+
+                  <p>{item}</p>
+
                 </CardContent>
+
               </Card>
-              <Card className="bg-secondary">
-                <CardHeader>
-                  <CardTitle>Student Ambassador</CardTitle>
-                  <CardDescription>Shiv Nadar University, Chennai | Jan 2025 - Present</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Serving as a key point of contact for prospective students and parents, addressing queries about university life. I foster connections, guide and mentor juniors, and represent the institution at various forums.</p>
-                </CardContent>
-              </Card>
+
+            ))}
+
+          </div>
+
+        </section>
+
+        {/* CONTACT */}
+
+        <section
+          id="contact"
+          className="py-20 text-center"
+        >
+
+          <h2 className="text-3xl font-bold mb-10">
+
+            Contact
+
+          </h2>
+
+          <div className="space-y-4">
+
+            <div className="flex justify-center gap-3">
+
+              <Mail />
+
+              sreesairaghav13@gmail.com
+
             </div>
-          </section>
 
-          <section id="projects" className="scroll-m-20">
-            <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Projects</h2>
-            <div className="max-w-6xl mx-auto space-y-10">
-              <div>
-                <h3 className="text-2xl font-semibold mb-6 text-center text-primary">Personal Projects</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <Card className="bg-secondary flex flex-col h-full">
-                    <CardHeader>
-                      <CardTitle>PayFluxa</CardTitle>
-                      <CardDescription>AI-Powered Financial Digital Twin &amp; Risk Prediction System</CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex flex-col flex-grow">
-                      <p className="text-muted-foreground mb-4 text-sm flex-grow">Developed an intelligent financial modeling framework that simulates future cash flow behavior, predicts repayment stress, enables adaptive EMI restructuring, and generates explainable risk insights. The system supports proactive financial planning through personalized investment guidance, alternative credit scoring, and dynamic user financial profiling.</p>
-                      <div className="flex gap-2 mb-4">
-                        <Button variant="outline" size="sm" asChild>
-                          <a href="https://drive.google.com/file/d/1iGUKARSyrI_jah62UgyY1L8iSyv1T1wn/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                            Demo Video <ExternalLink className="ml-2 h-4 w-4" />
-                          </a>
-                        </Button>
-                        <Button variant="outline" size="sm" asChild>
-                          <a href="https://github.com/Team-BrawlDevs/PayFluxa" target="_blank" rel="noopener noreferrer">
-                            GitHub <Github className="ml-2 h-4 w-4" />
-                          </a>
-                        </Button>
-                      </div>
-                      <p className="italic text-sm text-primary">Best Project Presentation at CEG Anna University</p>
-                    </CardContent>
-                  </Card>
+            <div className="flex justify-center gap-3">
 
-                  <Card className="bg-secondary flex flex-col h-full">
-                    <CardHeader>
-                      <CardTitle>WattSight</CardTitle>
-                      <CardDescription>AI-powered web dashboard for EV charging stations.</CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex flex-col flex-grow">
-                      <p className="text-muted-foreground mb-4 text-sm flex-grow">Advanced dashboard for real-time monitoring, predictive analytics, and intelligent insights into electric vehicle charging stations.</p>
-                      <div className="flex gap-2 mt-auto">
-                        <Button variant="outline" size="sm" asChild>
-                          <a href="https://wattsight-production.up.railway.app/" target="_blank" rel="noopener noreferrer">
-                            Live Demo <ExternalLink className="ml-2 h-4 w-4" />
-                          </a>
-                        </Button>
-                        <Button variant="outline" size="sm" asChild>
-                          <a href="https://github.com/sreesairaghav/WattSight" target="_blank" rel="noopener noreferrer">
-                            GitHub <Github className="ml-2 h-4 w-4" />
-                          </a>
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
+              <Phone />
 
-                  <Card className="bg-secondary flex flex-col h-full">
-                    <CardHeader>
-                      <CardTitle>TragerX</CardTitle>
-                      <CardDescription>ROS-based autonomous trolley navigation system.</CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex flex-col flex-grow">
-                      <p className="text-muted-foreground mb-4 text-sm flex-grow">Enhances passenger convenience by enabling autonomous trolleys to navigate seamlessly to key airport locations like check-in counters and boarding gates.</p>
-                      <div className="flex gap-2 mb-4">
-                        <Button variant="outline" size="sm" asChild>
-                          <a href="https://drive.google.com/file/d/1-6IStxXljf9WD84k9xW_FxE0FGe_dwP6/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                            Demo Video <ExternalLink className="ml-2 h-4 w-4" />
-                          </a>
-                        </Button>
-                        <Button variant="outline" size="sm" asChild>
-                          <a href="https://github.com/aerosibin/TragerX" target="_blank" rel="noopener noreferrer">
-                            GitHub <Github className="ml-2 h-4 w-4" />
-                          </a>
-                        </Button>
-                      </div>
-                      <p className="italic text-sm text-primary">Best Project Presentation at CEG Anna University, Chennai &amp; Runner-up at IoT Verse, IIITDM Kanchipuram.</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
+              +91 9962875610
 
-              <div>
-                <h3 className="text-2xl font-semibold mb-6 text-center text-primary">Industrial Projects (Beumer Group)</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                  <Card className="bg-secondary flex flex-col h-full">
-                    <CardHeader>
-                      <CardTitle>Fehlix</CardTitle>
-                      <CardDescription>Predictive maintenance for baggage handling systems.</CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex flex-col flex-grow">
-                      <p className="text-muted-foreground flex-grow">Forecasted sensor faults in baggage systems using ML models; deployed a fault prediction engine to improve maintenance response time.</p>
-                    </CardContent>
-                  </Card>
-                  <Card className="bg-secondary flex flex-col h-full">
-                    <CardHeader>
-                      <CardTitle>Nexflight</CardTitle>
-                      <CardDescription>Baggage transfer optimization model.</CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex flex-col flex-grow">
-                      <p className="text-muted-foreground flex-grow">Developed an optimization model to compute baggage transfer feasibility between flights, minimizing delays across airport logistics. Currently under further development.</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
             </div>
-          </section>
 
-          <section id="skills" className="scroll-m-20">
-            <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Skills</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <Card className="bg-accent">
-                <CardHeader>
-                  <CardTitle className="text-center text-primary">Programming</CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-wrap gap-2 justify-center">
-                  <Badge variant="secondary">Python</Badge>
-                  <Badge variant="secondary">C/C++</Badge>
-                  <Badge variant="secondary">Java</Badge>
-                  <Badge variant="secondary">Embedded C</Badge>
-                  <Badge variant="secondary">SQL</Badge>
-                  <Badge variant="secondary">HTML</Badge>
-                  <Badge variant="secondary">CSS</Badge>
-                  <Badge variant="secondary">JS</Badge>
-                </CardContent>
-              </Card>
-              <Card className="bg-accent">
-                <CardHeader>
-                  <CardTitle className="text-center text-primary">Tools</CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-wrap gap-2 justify-center">
-                  <Badge variant="secondary">Linux</Badge>
-                  <Badge variant="secondary">Git</Badge>
-                  <Badge variant="secondary">Excel</Badge>
-                  <Badge variant="secondary">Embedded Systems</Badge>
-                  <Badge variant="secondary">FastAPI</Badge>
-                  <Badge variant="secondary">Supabase</Badge>
-                  <Badge variant="secondary">AWS IoT Core</Badge>
-                  <Badge variant="secondary">Snowflake</Badge>
-                </CardContent>
-              </Card>
-              <Card className="bg-accent">
-                <CardHeader>
-                  <CardTitle className="text-center text-primary">AI/ML</CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-wrap gap-2 justify-center">
-                  <Badge variant="secondary">TensorFlow</Badge>
-                  <Badge variant="secondary">Scikit-learn</Badge>
-                  <Badge variant="secondary">NumPy</Badge>
-                  <Badge variant="secondary">Pandas</Badge>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
+            <div className="flex justify-center gap-3">
 
-          <section id="education" className="scroll-m-20">
-            <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Education</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <Card className="bg-secondary">
-                <CardHeader>
-                  <CardTitle>Shiv Nadar University, Chennai</CardTitle>
-                  <CardDescription>Aug 2023 - Aug 2027</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Bachelor of Technology - Computer Science Engineering with IoT</p>
-                  <p className="text-sm">CGPA: 8.81</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-secondary">
-                <CardHeader>
-                  <CardTitle>DAV Public School, Chennai</CardTitle>
-                  <CardDescription>Graduated 2023</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Served as the School Pupil Leader.</p>
-                  <p className="text-sm">12th CBSE: 92.2% | 10th CBSE: 94.8%</p>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
+              <MapPin />
 
-          <section id="achievements" className="scroll-m-20">
-            <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Achievements</h2>
-            <div className="max-w-3xl mx-auto">
-              <ul className="space-y-4">
-                <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
-                  <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-muted-foreground">Recognized by the CEO of Beumer Group Middle East for impactful ML contributions during my internship.</p>
-                </li>
-                <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
-                  <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-muted-foreground">Awarded <span className="font-semibold text-foreground">Best Project</span> for &quot;PayFluxa&quot; at CEG Anna University, Chennai - ITRIX &apos;26.</p>
-                </li>
-                <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
-                  <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-muted-foreground">Awarded <span className="font-semibold text-foreground">Best Project</span> for &quot;TragerX&quot; at CEG Anna University, Chennai - ITRIX &apos;25.</p>
-                </li>
-                <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
-                  <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-muted-foreground">Achieved <span className="font-semibold text-foreground">Runner-Up</span> position in the IoT-Verse Hackathon at IIITDM, Kanchipuram.</p>
-                </li>
-                <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
-                  <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-muted-foreground">Selected as a <span className="font-semibold text-foreground">Student Ambassador</span> at Shiv Nadar University, representing the institution.</p>
-                </li>
-                <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
-                  <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-muted-foreground">Served as the <span className="font-semibold text-foreground">School Pupil Leader</span> at DAV Public School, leading the student body.</p>
-                </li>
-              </ul>
-            </div>
-          </section>
+              Chennai, India
 
-          <section id="contact" className="text-center py-10 scroll-m-20">
-            <h2 className="text-3xl font-semibold mb-6 border-b pb-3">Contact Me</h2>
-            <div className="space-y-4 max-w-md mx-auto">
-              <div className="flex items-center justify-center gap-3">
-                <Mail className="w-5 h-5 text-muted-foreground" />
-                <a href="mailto:sreesairaghav13@gmail.com" className="hover:text-primary">sreesairaghav13@gmail.com</a>
-              </div>
-              <div className="flex items-center justify-center gap-3">
-                <Mail className="w-5 h-5 text-muted-foreground" />
-                <a href="mailto:sree23110160@snuchennai.edu.in" className="hover:text-primary">sree23110160@snuchennai.edu.in</a>
-              </div>
-              <div className="flex items-center justify-center gap-3">
-                <Phone className="w-5 h-5 text-muted-foreground" />
-                <span>+91 9962875610</span>
-              </div>
-              <div className="flex items-center justify-center gap-3">
-                <MapPin className="w-5 h-5 text-muted-foreground" />
-                <span>Chennai, India</span>
-              </div>
             </div>
-          </section>
-        </div>
+
+          </div>
+
+        </section>
+
       </main>
+
     </div>
   );
 }
