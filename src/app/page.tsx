@@ -22,7 +22,7 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="max-w-5xl mx-auto px-6 md:px-8 flex h-14 items-center justify-between">
-          <a href="#" className="text-lg font-bold scroll-m-20">My Portfolio</a>
+          <a href="#home" className="text-lg font-bold scroll-m-20">My Portfolio</a>
           <nav className="hidden md:flex gap-6">
             {navLinks.map((link) => (
               <a key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
@@ -126,7 +126,7 @@ export default function Home() {
                   <Card className="bg-secondary flex flex-col h-full">
                     <CardHeader>
                       <CardTitle>PayFluxa</CardTitle>
-                      <CardDescription>AI-Powered Financial Digital Twin & Risk Prediction System</CardDescription>
+                      <CardDescription>AI-Powered Financial Digital Twin &amp; Risk Prediction System</CardDescription>
                     </CardHeader>
                     <CardContent className="flex flex-col flex-grow">
                       <p className="text-muted-foreground mb-4 text-sm flex-grow">Developed an intelligent financial modeling framework that simulates future cash flow behavior, predicts repayment stress, enables adaptive EMI restructuring, and generates explainable risk insights. The system supports proactive financial planning through personalized investment guidance, alternative credit scoring, and dynamic user financial profiling.</p>
