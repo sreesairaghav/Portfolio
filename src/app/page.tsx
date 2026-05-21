@@ -21,9 +21,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto flex h-14 items-center justify-between">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 flex h-14 items-center justify-between">
           <a href="#" className="text-lg font-bold scroll-m-20">My Portfolio</a>
-          <nav className="hidden md:flex gap-4">
+          <nav className="hidden md:flex gap-6">
             {navLinks.map((link) => (
               <a key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
                 {link.name}
@@ -62,7 +62,7 @@ export default function Home() {
                <div className="flex justify-center items-center gap-4 pt-4">
                 <a href="https://www.linkedin.com/in/sree-sai-raghav-c-023822291/" target="_blank" rel="noopener noreferrer" className="hover:text-primary"><Linkedin /></a>
                 <a href="https://github.com/sreesairaghav" target="_blank" rel="noopener noreferrer" className="hover:text-primary"><Github /></a>
-                <a href="mailto:sree23110160@snuchennai.edu.in" className="hover:text-primary"><Mail /></a>
+                <a href="mailto:sreesairaghav13@gmail.com" className="hover:text-primary"><Mail /></a>
               </div>
             </div>
         </section>
@@ -74,7 +74,7 @@ export default function Home() {
               <div className="md:col-span-2 space-y-4 text-muted-foreground text-left">
                 <p>A passionate tech enthusiast exploring the intersection of Artificial Intelligence, Machine Learning, and the Internet of Things. I enjoy building smart, real-world applications to solve problems.</p>
                 <p>With hands-on internship experience, I’ve worked on ML models and big data analytics to solve meaningful problems. Whether it’s automating systems, analyzing complex datasets, or developing new solutions, I'm driven by curiosity and a builder’s mindset.</p>
-                <p>Driven by curiosity and a builder’s mindset, I’m always learning, exploring, and creating.</p>
+                <p>Driven by curiosity and a builder’s mindset, I’m always learning, exploring, and creating. I am also strong in leadership and product management, bringing a strategic approach to the projects I build.</p>
               </div>
               <Card className="bg-accent">
                 <CardHeader>
@@ -123,6 +123,28 @@ export default function Home() {
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-center text-primary">Personal Projects</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <Card className="bg-secondary">
+                    <CardHeader>
+                      <CardTitle>FinZen</CardTitle>
+                      <CardDescription>AI-Powered Financial Digital Twin & Risk Prediction System</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4">Developed an intelligent financial modeling framework that simulates future cash flow behavior, predicts repayment stress, enables adaptive EMI restructuring, and generates explainable risk insights. The system supports proactive financial planning through personalized investment guidance, alternative credit scoring, and dynamic user financial profiling.</p>
+                      <div className="flex gap-2 mb-4">
+                        <Button variant="outline" size="sm" asChild>
+                          <a href="https://drive.google.com/file/d/1iGUKARSyrI_jah62UgyY1L8iSyv1T1wn/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            Demo Video <ExternalLink className="ml-2 h-4 w-4" />
+                          </a>
+                        </Button>
+                        <Button variant="outline" size="sm" asChild>
+                          <a href="https://github.com/Team-BrawlDevs/PayFluxa" target="_blank" rel="noopener noreferrer">
+                            GitHub <Github className="ml-2 h-4 w-4" />
+                          </a>
+                        </Button>
+                      </div>
+                      <p className="italic text-sm text-primary">Best Project Presentation at CEG Anna University</p>
+                    </CardContent>
+                  </Card>
                   <Card className="bg-secondary">
                     <CardHeader>
                       <CardTitle>WattSight</CardTitle>
@@ -203,9 +225,13 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="flex flex-wrap gap-2 justify-center">
                   <Badge variant="secondary">Python</Badge>
-                  <Badge variant="secondary">C++</Badge>
+                  <Badge variant="secondary">C/C++</Badge>
                   <Badge variant="secondary">Java</Badge>
+                  <Badge variant="secondary">Embedded C</Badge>
                   <Badge variant="secondary">SQL</Badge>
+                  <Badge variant="secondary">HTML</Badge>
+                  <Badge variant="secondary">CSS</Badge>
+                  <Badge variant="secondary">JS</Badge>
                 </CardContent>
               </Card>
               <Card className="bg-accent">
@@ -213,11 +239,14 @@ export default function Home() {
                   <CardTitle className="text-center text-primary">Tools</CardTitle>
                 </CardHeader>
                 <CardContent className="flex flex-wrap gap-2 justify-center">
+                  <Badge variant="secondary">Linux</Badge>
                   <Badge variant="secondary">Git</Badge>
-                  <Badge variant="secondary">ROS2</Badge>
-                  <Badge variant="secondary">SLAM</Badge>
+                  <Badge variant="secondary">Excel</Badge>
                   <Badge variant="secondary">Embedded Systems</Badge>
-                  <Badge variant="secondary">Unix/Linux</Badge>
+                  <Badge variant="secondary">FastAPI</Badge>
+                  <Badge variant="secondary">Supabase</Badge>
+                  <Badge variant="secondary">AWS IoT Core</Badge>
+                  <Badge variant="secondary">Snowflake</Badge>
                 </CardContent>
               </Card>
               <Card className="bg-accent">
@@ -226,9 +255,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="flex flex-wrap gap-2 justify-center">
                   <Badge variant="secondary">TensorFlow</Badge>
-                  <Badge variant="secondary">PyTorch</Badge>
                   <Badge variant="secondary">Scikit-learn</Badge>
-                  <Badge variant="secondary">OpenCV</Badge>
                   <Badge variant="secondary">NumPy</Badge>
                   <Badge variant="secondary">Pandas</Badge>
                 </CardContent>
@@ -246,7 +273,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">Bachelor of Technology - Computer Science Engineering with IoT</p>
-                  <p className="text-sm">CGPA: 8.86</p>
+                  <p className="text-sm">CGPA: 8.81</p>
                 </CardContent>
               </Card>
               <Card className="bg-secondary">
@@ -272,7 +299,11 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
                   <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-muted-foreground">Awarded <span className="font-semibold text-foreground">Best Project</span> for "TragerX" at CEG Anna University, Chennai.</p>
+                  <p className="text-muted-foreground">Awarded <span className="font-semibold text-foreground">Best Project</span> for "FinZen" at CEG Anna University, Chennai - ITRIX '26.</p>
+                </li>
+                <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
+                  <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <p className="text-muted-foreground">Awarded <span className="font-semibold text-foreground">Best Project</span> for "TragerX" at CEG Anna University, Chennai - ITRIX '25.</p>
                 </li>
                 <li className="flex items-start gap-4 p-4 rounded-lg bg-secondary">
                   <Trophy className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
@@ -295,6 +326,10 @@ export default function Home() {
             <div className="space-y-4 max-w-md mx-auto">
               <div className="flex items-center justify-center gap-3">
                 <Mail className="w-5 h-5 text-muted-foreground" />
+                <a href="mailto:sreesairaghav13@gmail.com" className="hover:text-primary">sreesairaghav13@gmail.com</a>
+              </div>
+              <div className="flex items-center justify-center gap-3">
+                <Mail className="w-5 h-5 text-muted-foreground" />
                 <a href="mailto:sree23110160@snuchennai.edu.in" className="hover:text-primary">sree23110160@snuchennai.edu.in</a>
               </div>
               <div className="flex items-center justify-center gap-3">
@@ -312,9 +347,3 @@ export default function Home() {
     </div>
   );
 }
-    
-    
-
-    
-
-    
