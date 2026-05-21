@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="max-w-6xl mx-auto px-6 md:px-12 flex h-14 items-center justify-between">
+        <div className="max-w-5xl mx-auto px-6 md:px-8 flex h-14 items-center justify-between">
           <a href="#" className="text-lg font-bold scroll-m-20">My Portfolio</a>
           <nav className="hidden md:flex gap-6">
             {navLinks.map((link) => (
@@ -70,13 +70,13 @@ export default function Home() {
         <div className="px-4 md:px-8 lg:px-12 py-16 space-y-16">
           <section id="about" className="scroll-m-20">
             <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">About Me</h2>
-            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="md:col-span-2 space-y-4 text-muted-foreground text-left">
                 <p>A passionate tech enthusiast exploring the intersection of Artificial Intelligence, Machine Learning, and the Internet of Things. I enjoy building smart, real-world applications to solve problems.</p>
                 <p>With hands-on internship experience, I’ve worked on ML models and big data analytics to solve meaningful problems. Whether it’s automating systems, analyzing complex datasets, or developing new solutions, I'm driven by curiosity and a builder’s mindset.</p>
                 <p>Driven by curiosity and a builder’s mindset, I’m always learning, exploring, and creating. I am also strong in leadership and product management, bringing a strategic approach to the projects I build.</p>
               </div>
-              <Card className="bg-accent">
+              <Card className="bg-accent flex flex-col justify-center">
                 <CardHeader>
                   <CardTitle>Beyond Tech</CardTitle>
                 </CardHeader>
@@ -119,17 +119,17 @@ export default function Home() {
 
           <section id="projects" className="scroll-m-20">
             <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Projects</h2>
-            <div className="max-w-4xl mx-auto space-y-8">
+            <div className="max-w-6xl mx-auto space-y-10">
               <div>
-                <h3 className="text-2xl font-semibold mb-4 text-center text-primary">Personal Projects</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <Card className="bg-secondary">
+                <h3 className="text-2xl font-semibold mb-6 text-center text-primary">Personal Projects</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <Card className="bg-secondary flex flex-col h-full">
                     <CardHeader>
                       <CardTitle>PayFluxa</CardTitle>
                       <CardDescription>AI-Powered Financial Digital Twin & Risk Prediction System</CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground mb-4">Developed an intelligent financial modeling framework that simulates future cash flow behavior, predicts repayment stress, enables adaptive EMI restructuring, and generates explainable risk insights. The system supports proactive financial planning through personalized investment guidance, alternative credit scoring, and dynamic user financial profiling.</p>
+                    <CardContent className="flex flex-col flex-grow">
+                      <p className="text-muted-foreground mb-4 text-sm flex-grow">Developed an intelligent financial modeling framework that simulates future cash flow behavior, predicts repayment stress, enables adaptive EMI restructuring, and generates explainable risk insights. The system supports proactive financial planning through personalized investment guidance, alternative credit scoring, and dynamic user financial profiling.</p>
                       <div className="flex gap-2 mb-4">
                         <Button variant="outline" size="sm" asChild>
                           <a href="https://drive.google.com/file/d/1iGUKARSyrI_jah62UgyY1L8iSyv1T1wn/view?usp=sharing" target="_blank" rel="noopener noreferrer">
@@ -145,14 +145,15 @@ export default function Home() {
                       <p className="italic text-sm text-primary">Best Project Presentation at CEG Anna University</p>
                     </CardContent>
                   </Card>
-                  <Card className="bg-secondary">
+
+                  <Card className="bg-secondary flex flex-col h-full">
                     <CardHeader>
                       <CardTitle>WattSight</CardTitle>
                       <CardDescription>AI-powered web dashboard for EV charging stations.</CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground mb-4">Advanced dashboard for real-time monitoring, predictive analytics, and intelligent insights into electric vehicle charging stations.</p>
-                      <div className="flex gap-2">
+                    <CardContent className="flex flex-col flex-grow">
+                      <p className="text-muted-foreground mb-4 text-sm flex-grow">Advanced dashboard for real-time monitoring, predictive analytics, and intelligent insights into electric vehicle charging stations.</p>
+                      <div className="flex gap-2 mt-auto">
                         <Button variant="outline" size="sm" asChild>
                           <a href="https://wattsight-production.up.railway.app/" target="_blank" rel="noopener noreferrer">
                             Live Demo <ExternalLink className="ml-2 h-4 w-4" />
@@ -166,13 +167,14 @@ export default function Home() {
                       </div>
                     </CardContent>
                   </Card>
-                  <Card className="bg-secondary">
+
+                  <Card className="bg-secondary flex flex-col h-full">
                     <CardHeader>
                       <CardTitle>TragerX</CardTitle>
                       <CardDescription>ROS-based autonomous trolley navigation system.</CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground mb-4">Enhances passenger convenience by enabling autonomous trolleys to navigate seamlessly to key airport locations like check-in counters and boarding gates.</p>
+                    <CardContent className="flex flex-col flex-grow">
+                      <p className="text-muted-foreground mb-4 text-sm flex-grow">Enhances passenger convenience by enabling autonomous trolleys to navigate seamlessly to key airport locations like check-in counters and boarding gates.</p>
                       <div className="flex gap-2 mb-4">
                         <Button variant="outline" size="sm" asChild>
                           <a href="https://drive.google.com/file/d/1-6IStxXljf9WD84k9xW_FxE0FGe_dwP6/view?usp=sharing" target="_blank" rel="noopener noreferrer">
@@ -190,25 +192,26 @@ export default function Home() {
                   </Card>
                 </div>
               </div>
+
               <div>
-                <h3 className="text-2xl font-semibold mb-4 text-center text-primary">Industrial Projects (Beumer Group)</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <Card className="bg-secondary">
+                <h3 className="text-2xl font-semibold mb-6 text-center text-primary">Industrial Projects (Beumer Group)</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                  <Card className="bg-secondary flex flex-col h-full">
                     <CardHeader>
                       <CardTitle>Fehlix</CardTitle>
                       <CardDescription>Predictive maintenance for baggage handling systems.</CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">Forecasted sensor faults in baggage systems using ML models; deployed a fault prediction engine to improve maintenance response time.</p>
+                    <CardContent className="flex flex-col flex-grow">
+                      <p className="text-muted-foreground flex-grow">Forecasted sensor faults in baggage systems using ML models; deployed a fault prediction engine to improve maintenance response time.</p>
                     </CardContent>
                   </Card>
-                  <Card className="bg-secondary">
+                  <Card className="bg-secondary flex flex-col h-full">
                     <CardHeader>
                       <CardTitle>Nexflight</CardTitle>
                       <CardDescription>Baggage transfer optimization model.</CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">Developed an optimization model to compute baggage transfer feasibility between flights, minimizing delays across airport logistics. Currently under further development.</p>
+                    <CardContent className="flex flex-col flex-grow">
+                      <p className="text-muted-foreground flex-grow">Developed an optimization model to compute baggage transfer feasibility between flights, minimizing delays across airport logistics. Currently under further development.</p>
                     </CardContent>
                   </Card>
                 </div>
@@ -218,7 +221,7 @@ export default function Home() {
 
           <section id="skills" className="scroll-m-20">
             <h2 className="text-3xl font-semibold mb-6 border-b pb-3 text-center">Skills</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <Card className="bg-accent">
                 <CardHeader>
                   <CardTitle className="text-center text-primary">Programming</CardTitle>
